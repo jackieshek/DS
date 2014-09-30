@@ -1,0 +1,18 @@
+begin process p1
+print aaaa
+print bbbb
+print cccc
+end process
+begin process p2
+print xxxx
+print yyyy
+end process
+begin process p3
+print 1111
+print 2222
+print 3333
+end process
+begin process p4
+print &&&&
+print $$$$
+end process

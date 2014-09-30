@@ -1,0 +1,28 @@
+begin process p1
+begin mutex
+print aaaa
+print bbbb
+print cccc
+print dddd
+print eeee
+print ffff
+end mutex
+print gggg
+end process
+begin process p2
+recv p4 ****
+print xxxx
+print yyyy
+end process
+begin process p3
+print 1111
+print 2222
+print 3333
+end process
+begin process p4
+print &&&&
+print $$$$
+send p2 ****
+print ^^^^
+end process
+

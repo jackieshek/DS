@@ -1,0 +1,93 @@
+begin process p1
+print aaaa
+print bbbb
+print cccc
+print dddd
+print aaaaa
+print bbbba
+begin mutex
+print cccca
+print dddda
+print aaaab
+print bbbbb
+print ccccb
+print ddddb
+print aaaac
+recv p2 m1
+send p3 m1
+print bbbbc
+print ccccc
+print ddddc
+end mutex
+print aaaad
+print bbbbd
+print ccccd
+print ddddd
+print aaaae
+print bbbbe
+print cccce
+send p5 tttt
+print dddde
+end process
+begin process p2
+send p1 m1
+print xxxx
+print yyyy
+print zzzz
+print wwww
+print xxxx
+print yyyy
+print zzzz
+begin mutex
+send p5 tttt
+print wwww
+print xxxx
+print yyyy
+print zzzz
+print wwww
+print xxxx
+end mutex
+print yyyy
+send p7 m2
+print zzzz
+recv p7 aaaa
+print wwww
+end process
+begin process p3
+recv p1 m1
+print 1111
+print 2222
+print 3333
+end process
+begin process p4
+print &&&&
+print $$$$
+end process
+begin process p5
+send p1 222
+send p2 xxxx
+send p3 wwwww
+recv p1 tttt
+send p7 dddd
+recv p7 ssss
+end process
+begin process p6
+print yyyy
+end process
+begin process p7
+send p5 ssss
+send p1 aaaa
+send p2 aaaa
+print m1
+recv p2 m2
+end process
+begin process p8
+begin mutex
+print f
+end mutex
+end process
+begin process p9
+print a
+print b
+print c
+end process
